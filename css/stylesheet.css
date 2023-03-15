@@ -5,6 +5,9 @@ body {
 aside {
     background-color: #FAF4EC;
 }
+main {
+    display:grid;
+}
 header {
     display:flex;
     flex-direction: column;
@@ -23,4 +26,30 @@ nav > a {
 img {
     max-width: 5%;
     height: auto;
+}
+.green {
+    color: white;
+    background-color: #375F68;
+    border: solid #375F68;
+    border-radius: 10px;
+    padding: 8px;
+}
+.purple {
+    color: white;
+    background-color: #56536A;
+    border: solid #56536A;
+    border-radius: 10px;
+    padding: 8px;
+}
+.red {
+    color: white;
+    background-color: #9B332C;
+    border: solid #9B332C;
+    border-radius: 10px;
+    padding: 8px;
+}
+.box {
+    color: black;
+    border: solid #318CC4;
+    background-color: #FAF4EC; 
 }
