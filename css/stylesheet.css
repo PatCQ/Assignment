@@ -8,17 +8,19 @@ aside {
 header {
     display:flex;
     flex-direction: column;
-    justify-content: center;
-    align-content: center;
+    text-align: center;
 }
-.title {
-    margin-top:auto;
-    margin-left:auto;
-    margin-right:auto;
+footer {
+    display:grid;
+    text-align: center;
 }
-.links {
+nav {
     margin-left:auto;
 }
 nav > a {
     margin: 5px;
+}
+img {
+    max-width: 5%;
+    height: auto;
 }
