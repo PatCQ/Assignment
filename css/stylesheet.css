@@ -26,6 +26,7 @@ img {
 }
 main {
     display:grid;
+    grid-template-columns: 1fr 1fr;
     grid-gap: 10px;
 }
 button {
@@ -68,4 +69,14 @@ button {
     justify-self:end;
     gap: 10px;
 }
-
+@media screen and (min-width: 600px) {
+    body {
+        display:grid;
+        grid-template-columns: 1fr 5fr;
+        width: 100vw;
+        height: 100vh;
+    }
+    aside {
+        grid-row: 1/4
+    }
+}
