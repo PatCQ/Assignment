@@ -21,11 +21,12 @@ nav > a {
     margin: 5px;
 }
 img {
-    max-width: 5%;
-    height: auto;
+    width: 38px;
+    height: 38px;
 }
 main {
     display:grid;
+    grid-gap: 10px;
 }
 button {
     color: white;
