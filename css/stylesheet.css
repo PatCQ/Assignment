@@ -32,6 +32,7 @@ main {
 button {
     color: white;
     width: fit-content;
+    height: fit-content;
     border-radius: 10px;
     padding: 8px;
 }
@@ -73,10 +74,18 @@ button {
     body {
         display:grid;
         grid-template-columns: 1fr 5fr;
-        width: 100vw;
+        grid-template-rows: fit-content(100%) 1fr 1fr 1fr;
         height: 100vh;
+        margin: 0px 5px;
     }
     aside {
-        grid-row: 1/4
+        grid-row: 1/5;
+    }
+    aside > h1 {
+        text-align: center;
+    }
+    footer {
+        display:flex;
+        flex-direction: column;
     }
 }
