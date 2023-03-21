@@ -76,7 +76,9 @@ button {
         grid-template-columns: 1fr 5fr;
         grid-template-rows: fit-content(100%) 1fr 1fr 1fr;
         height: 100vh;
-        margin: 0px 5px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        margin-left: 0px;
     }
     aside {
         grid-row: 1/5;
