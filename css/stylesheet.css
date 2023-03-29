@@ -1,6 +1,6 @@
 body {
     background-color: #F3E9DE;
-    color: #256993;
+    color: #8CC0E3;
 }
 aside {
     background-color: #FAF4EC;
@@ -75,6 +75,17 @@ h1 {
 }
 h2 {
     font-family: 'Montserrat', 'sans-serif';
+}
+.darkBody {
+    background-color: #0F0A05;
+    color: #DEEDF7
+}
+.darkAside {
+    background-color: #292929;
+}
+.darkText {
+    background-color: #292929;
+    color: #DEEDF7
 }
 @media screen and (min-width: 600px) {
     body {
