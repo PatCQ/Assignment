@@ -87,6 +87,9 @@ h2 {
     background-color: #292929;
     color: #DEEDF7
 }
+.hidden {
+    display: none;
+}
 @media screen and (min-width: 600px) {
     body {
         display:grid;

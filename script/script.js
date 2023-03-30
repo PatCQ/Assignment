@@ -1,6 +1,7 @@
 let newBtn = document.querySelector(".box1")
 let darkBtn = document.querySelector(".purple")
-let saveBtn = document.querySelector(".")
+let saveBtn = document.querySelector(".save")
+let cancelBtn = document.querySelector(".red")
 function darkMode() {
     let elementAside = document.querySelector("aside");
     let elementTextBody = document.querySelector(".text");
@@ -14,4 +15,11 @@ function darkMode() {
         darkBtn.textContent = "Dark Theme";
     }
 };
+function cancel() {
+    let textBox = document.querySelector('.text');
+    textBox.classList.add("hidden");
+    saveBtn.classList.add("hidden");
+    cancelBtn.classList.add("hidden");
+};
 darkBtn.addEventListener('click', darkMode);
+cancelBtn.addEventListener('click', cancel);
