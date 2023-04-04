@@ -3,7 +3,8 @@ let darkBtn = document.querySelector(".purple")
 let saveBtn = document.querySelector(".save")
 let cancelBtn = document.querySelector(".red")
 let textBox = document.querySelector('.text');
-
+let notesArray = [{title:"note one", body:"this is my first note"}]
+let index = 0;
 function darkMode() {
     let elementAside = document.querySelector("aside");
     let elementTextBody = document.querySelector(".text");
@@ -33,7 +34,22 @@ function newNote() {
     else {
         textBox.value = ""
     }
-}
+};
+
+function saveNote(index) {
+    let choice = window.prompt("What is the title of the note that you want to save?");
+    notesArray.push({title: choice, body: textBox.value});
+    index += 1;
+    let li = document.createElement("li");
+    li.appendChild(document.createTextNode(notesArray[index]['title']));
+    document.querySelector('.notes').appendChild(li);
+    console.log(notesArray);
+    return index;
+};
+
 darkBtn.addEventListener('click', darkMode);
 cancelBtn.addEventListener('click', cancel);
 newBtn.addEventListener('click', newNote);
+saveBtn.addEventListener('click', function() {
+    index = saveNote(index);
+}, false);
