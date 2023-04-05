@@ -4,6 +4,7 @@ let saveBtn = document.querySelector(".save")
 let cancelBtn = document.querySelector(".red")
 let textBox = document.querySelector('.text');
 let notesArray = [{title:"note one", body:"this is my first note"}]
+let listUL = document.querySelector('ul')
 let index = 0;
 function darkMode() {
     let elementAside = document.querySelector("aside");
@@ -43,9 +44,17 @@ function saveNote(index) {
     let li = document.createElement("li");
     li.appendChild(document.createTextNode(notesArray[index]['title']));
     document.querySelector('.notes').appendChild(li);
-    console.log(notesArray);
     return index;
 };
+
+function readNote(event) {
+    for (element in notesArray) {
+        if (notesArray[element]['title'] == event.target.textContent) {
+            textBox.textContent = notesArray[element]['body'];
+        }
+    }
+};
+
 
 darkBtn.addEventListener('click', darkMode);
 cancelBtn.addEventListener('click', cancel);
@@ -53,3 +62,4 @@ newBtn.addEventListener('click', newNote);
 saveBtn.addEventListener('click', function() {
     index = saveNote(index);
 }, false);
+listUL.addEventListener('click', readNote);
