@@ -33,7 +33,7 @@ function newNote() {
         cancelBtn.classList.remove("hidden");
     }
     else {
-        textBox.value = ""
+        textBox.textContent = ""
     }
 };
 
