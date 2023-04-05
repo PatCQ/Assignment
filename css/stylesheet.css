@@ -78,17 +78,21 @@ h2 {
 }
 .darkBody {
     background-color: #0F0A05;
-    color: #DEEDF7
+    color: #DEEDF7;
 }
 .darkAside {
     background-color: #292929;
 }
 .darkText {
     background-color: #292929;
-    color: #DEEDF7
+    color: #DEEDF7;
 }
+.darkText::placeholder {
+    color:#DEEDF7;
+}
+
 .hidden {
-    display: none;
+    visibility: hidden;
 }
 @media screen and (min-width: 600px) {
     body {
