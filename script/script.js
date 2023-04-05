@@ -57,7 +57,6 @@ function saveNote() {
 }
 
 function readNote(event) {
-    console.log(notesArray)
     for (element in notesArray) {
         if (notesArray[element]['title'] == event.target.textContent) {
             textBox.value = notesArray[element]['body'];
