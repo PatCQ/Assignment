@@ -46,6 +46,12 @@ function saveNote() {
             if (choice == "") {
                 alert("Title can not be empty");
             }
+            for (let i = 0; i < notesArray.length; i++) {
+                if (choice == notesArray[i]['title']) {
+                    alert("Title can not match a pre existing title");
+                    choice = ""
+                }
+            }
         } while (choice == "") 
         if(choice != null) {
             notesArray.push({title: choice, body: textBox.value});
