@@ -3,7 +3,7 @@ let darkBtn = document.querySelector(".purple")
 let saveBtn = document.querySelector(".save")
 let cancelBtn = document.querySelector(".red")
 let textBox = document.querySelector('.text');
-let notesArray = [{title:"note one", body:"this is my first note"}]
+let notesArray = [{title:"note one", body:"this is my first note"}, {title:"note two", body:"This is my second note"}]
 let listUL = document.querySelector('ul')
 let index = 0;
 
@@ -38,17 +38,23 @@ function newNote() {
     }
 };
 
-function saveNote(index) {
-    let choice = window.prompt("What is the title of the note that you want to save?");
-    if (choice != NULL && choice != undefined && choice != "") {
-        notesArray.push({title: choice, body: textBox.value});
-        index += 1;
-        let li = document.createElement("li");
-        li.appendChild(document.createTextNode(notesArray[index]['title']));
-        document.querySelector('.notes').appendChild(li);
-        return index;
+function saveNote() {
+    if (textBox.value != "") {
+        let choice;
+        do {
+            choice = window.prompt("What is the title of the note that you want to save?");
+            if (choice == "") {
+                alert("Title can not be empty");
+            }
+        } while (choice == "") 
+        if(choice != null) {
+            notesArray.push({title: choice, body: textBox.value});
+            let li = document.createElement("li");
+            li.appendChild(document.createTextNode(choice));
+            document.querySelector('.notes').appendChild(li);
+        }
     }
-};
+}
 
 function readNote(event) {
     console.log(notesArray)
@@ -63,7 +69,5 @@ function readNote(event) {
 darkBtn.addEventListener('click', darkMode);
 cancelBtn.addEventListener('click', cancel);
 newBtn.addEventListener('click', newNote);
-saveBtn.addEventListener('click', function() {
-    index = saveNote(index);
-}, false);
+saveBtn.addEventListener('click', saveNote);
 listUL.addEventListener('click', readNote);
