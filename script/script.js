@@ -3,7 +3,7 @@ let darkBtn = document.querySelector(".purple")
 let saveBtn = document.querySelector(".save")
 let cancelBtn = document.querySelector(".red")
 let textBox = document.querySelector('.text');
-let notesArray = [{title:"note one", body:"this is my first note"}, {title:"note two", body:"This is my second note"}]
+let notesArray = [{title:"note one", body:"This is my first note"}, {title:"note two", body:"This is my second note"}]
 let listUL = document.querySelector('ul')
 let index = 0;
 
